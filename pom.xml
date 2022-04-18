@@ -98,6 +98,8 @@
 	      <id>nexus</id>
 	      <name>Acada Learning Releases Nexus Repository</name>
 	      <url>http://54.163.29.47:8081/repository/FBN_Mobile/</url>
+		<nexus.login>admin</nexus.login>
+		<nexus.password>admin123</nexus.password>
 	    </repository>
 	    
 	    <snapshotRepository>
