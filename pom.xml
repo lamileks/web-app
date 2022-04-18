@@ -96,13 +96,13 @@
 	<distributionManagement>
 	    <repository>
 	      <id>nexus</id>
-	      <name>FBN</name>
+	      <name>Acada Learning Releases Nexus Repository</name>
 	      <url>http://54.163.29.47:8081/repository/FBN_Mobile/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>FBN</name>
+	      <name>Acada Learning Snapshot Nexus Repository</name>
 	      <url>http://54.163.29.47:8081/repository/FBN_Mobile_Snapshot/</url>
 	    </snapshotRepository>
 	    
