@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>FBN</name>
-	      <url>http://54.163.29.47:8081/repository/lamileks_release/</url>
+	      <url>https://54.163.29.47:8081/repository/lamileks_release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>FBN</name>
-	      <url>http://54.163.29.47:8081/repository/FBN_Mobile_Snapshot/</url>
+	      <url>https://54.163.29.47:8081/repository/FBN_Mobile_Snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
