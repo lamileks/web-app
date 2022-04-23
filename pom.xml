@@ -21,7 +21,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://54.234.165.41:9000</sonar.host.url>
+		<sonar.host.url>http://172.31.26.75:9000</sonar.host.url>
 		<sonar.login>admin</sonar.login>
 		<sonar.password>admin</sonar.password>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>dayo</name>
-	      <url>http://54.163.29.47:8081/repository/MyApp_Release/</url>
+	      <url>http://172.31.30.24:8081/repository/MyApp_Release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>dayo</name>
-	      <url>http://54.163.29.47:8081/repository/FBN_Mobile_Snapshot</url>
+	      <url>http://172.31.30.24:8081/repository/FBN_Mobile_Snapshot</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
