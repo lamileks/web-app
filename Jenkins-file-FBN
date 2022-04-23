@@ -1,0 +1,53 @@
+  pipeline{
+    agent any
+    tools{
+      maven "maven 3.8.4"
+    }
+stages{
+  stage('1.GitClone'){
+  steps{
+    sh "echo Github cloning"
+    git 'https://github.com/lamileks/web-app.git'
+  }
+}
+stage('2.MavenBuild'){
+  steps{
+  sh "echo build packages"
+  sh "mvn clean package"
+}
+}
+stage('3.testingtheCode'){
+  steps{
+    sh "mvn sonar:sonar"
+  }
+  }
+stage('4.backupArchitfacts'){
+  steps{
+    sh "mvn deploy"
+  }
+  }
+ stage('5.Deploytostaging'){
+     steps{
+         deploy adapters: [tomcat9(credentialsId: 'T-cat_cred', path: '', url: 'http://35.173.178.1:8080/')], contextPath: null, war: 'target/*.war'
+     }
+ }
+ stage('6.Approval'){
+    steps{
+    sh "echo Approval Needed"
+    timeout(time:5,unit:'DAYS'){
+      input message:'Approval for Production'
+    }
+  }
+}
+ stage('7.Deploytostaging'){
+     steps{
+         deploy adapters: [tomcat9(credentialsId: 'T-cat_cred', path: '', url: 'http://35.173.178.1:8080/')], contextPath: null, war: 'target/*.war'
+     }
+ }
+ stage('8.Emailnotification'){
+  steps{
+    slackSend channel: 'team-2', message: 'Build Successful', teamDomain: 'acadalearn', tokenCredentialId: 's_cred_team2'
+  }
+ }
+}
+}
