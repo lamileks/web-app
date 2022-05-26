@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>dayo</name>
-	      <url>http://34.203.14.169:8081/repository/MyApp_Release/</url>
+	      <url>http://54.160.179.227:8081/nexus/repository/app1_release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>dayo</name>
-	      <url>http://34.203.14.169:8081/repository/MyApp_Snapshot/</url>
+	      <url>http://54.160.179.227:8081/nexus/repository/app1_release//url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
